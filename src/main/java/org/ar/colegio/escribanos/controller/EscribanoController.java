@@ -41,10 +41,6 @@ public class EscribanoController {
         log.debug("Recuperamos todos los escribanos");
 
         EscribanoResponse escribanoResponse = escribanoService.getEscribano(request.getCuit());
-        System.out.println(request.getCuit());
-        //EscribanoResponse escribanoResponse = new EscribanoResponse();
-        escribanoResponse.setApellido("Prueba");
-        escribanoResponse.setNombre("test");
         model.addAttribute(escribanoResponse);
         return "principal";
     }
